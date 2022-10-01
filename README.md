@@ -1,7 +1,16 @@
 # SVG file to beamer slides
 
+## Description
+
 This repo contains a Python 3 script which takes a multilayer SVG file as input and creates new files (SVG, PDF, and LaTeX) from which you can create
 a slide show consisting of the layers of the original file being stacked on top of each other. This is especially useful for LaTeX [beamer](https://ctan.org/pkg/beamer) presentations.
+
+## Dependencies
+
+* Python 3.6 or later
+* Inkscape 1.2 or later
+
+## Beamer instructions
 
 The process for creating beamer slides from an SVG file is as follows:
 1. Open the SVG file in [Inkscape](https://inkscape.org/) and split it into layers such that 'later' objects are placed on higher layers. Save the edited file as e.g. `myfile.svg`.
@@ -25,5 +34,7 @@ The process for creating beamer slides from an SVG file is as follows:
     \end{frame}
     ```
     That's it!
-    
+
+## More info
+
 For more info and options, run `python3 svgtoslides.py --help`
