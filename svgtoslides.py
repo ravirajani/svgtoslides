@@ -61,7 +61,7 @@ output_dir = args.output_dir
 
 def create_pdftex_from_svg(svg_filename, pdf_filename):
     """Makes a call to Inkscape to create a PDF
-    and a Latex file in the same directory as the input file. 
+    and a Latex file.
     If pdf_filename is 'file.pdf', then the output files
     are called 'file.pdf' and 'file.pdf_tex'
     """
