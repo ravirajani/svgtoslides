@@ -37,4 +37,4 @@ The process for creating beamer slides from an SVG file is as follows:
 
 ## More info
 
-For more info and options, run `python3 svgtoslides.py --help`
+For more info and options, run `svgtoslides --help`
