@@ -23,11 +23,11 @@ The process for creating beamer slides from an SVG file is as follows:
 
 3. In your beamer document, you can include the generated slides as follows:
     ```latex
-    \begin{overprint}
-        \onslide<1>\input{myfile1.pdf_tex}
-        \onslide<2>\input{myfile2.pdf_tex}
-        \onslide<3>\input{myfile.pdf_tex}
-    \end{overprint}
+    \begin{overlayarea}{width}{height}
+        \only<1>{\input{myfile1.pdf_tex}}
+        \only<2>{\input{myfile2.pdf_tex}}
+        \only<3>{\input{myfile.pdf_tex}}
+    \end{overlayarea}
     ```
     That's it!
 
