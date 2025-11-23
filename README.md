@@ -17,21 +17,17 @@ The process for creating beamer slides from an SVG file is as follows:
 2. Run `svgtoslides myfile.svg`. If there were 3 layers in the original file, this creates the files
     * `myfile1.pdf`, `myfile1.pdf_tex`, `myfile1.svg`, 
     * `myfile2.pdf`, `myfile2.pdf_tex`, `myfile2.svg`, 
-    * `myfile3.pdf`, `myfile3.pdf_tex`.
+    * `myfile.pdf`, `myfile.pdf_tex`.
     
     There is no file `myfile3.svg` as that would just be equal to the original `myfile.svg`.
 
 3. In your beamer document, you can include the generated slides as follows:
     ```latex
-    \usepackage{import}
-    ...
-    \begin{frame}
-        \scalebox{0.5}{ % Change the scale to suit you
-            \only<1>{\import{path/to/files/}{myfile1.pdf_tex}}
-            \only<2>{\import{path/to/files/}{myfile2.pdf_tex}}
-            \only<3>{\import{path/to/files/}{myfile3.pdf_tex}}
-        }
-    \end{frame}
+    \begin{overprint}
+        \onslide<1>\input{myfile1.pdf_tex}
+        \onslide<2>\input{myfile2.pdf_tex}
+        \onslide<3>\input{myfile.pdf_tex}
+    \end{overprint}
     ```
     That's it!
 
