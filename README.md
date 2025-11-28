@@ -17,7 +17,7 @@ The process for creating beamer slides from an SVG file is as follows:
 2. Run `svgtoslides myfile.svg`. If there were 3 layers in the original file, this creates the files
     * `myfile1.pdf`, `myfile1.pdf_tex`, `myfile1.svg`, 
     * `myfile2.pdf`, `myfile2.pdf_tex`, `myfile2.svg`, 
-    * `myfile.pdf`, `myfile.pdf_tex`.
+    * `myfile3.pdf`, `myfile3.pdf_tex`.
     
     There is no file `myfile3.svg` as that would just be equal to the original `myfile.svg`.
 
@@ -26,7 +26,7 @@ The process for creating beamer slides from an SVG file is as follows:
     \begin{overlayarea}{width}{height}
         \only<1| handout:0>{\input{myfile1.pdf_tex}}
         \only<2| handout:0>{\input{myfile2.pdf_tex}}
-        \only<3>{\input{myfile.pdf_tex}}
+        \only<3>{\input{myfile3.pdf_tex}}
     \end{overlayarea}
     ```
     That's it!
